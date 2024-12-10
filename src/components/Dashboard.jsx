@@ -15,7 +15,7 @@ const Dashboard = () => {
   // Fetch tasks
   const fetchTasks = async () => {
     if (!token) return;
-    const response = await fetch("http://localhost:4000/api/tasks/getTask", {
+    const response = await fetch("https://todo-list-backend-r9in.onrender.com/api/tasks/getTask", {
       headers: { Authorization: `Bearer ${token}` },
     });
     if (response.ok) {
@@ -63,7 +63,7 @@ const Dashboard = () => {
   // Toggle task completion
   const toggleComplete = async (id, completed) => {
     const response = await fetch(
-      `http://localhost:4000/api/tasks/updateTask/${id}`,
+      `https://todo-list-backend-r9in.onrender.com/api/tasks/updateTask/${id}`,
       {
         method: "PUT",
         headers: {
@@ -84,7 +84,7 @@ const Dashboard = () => {
   // Delete a task
   const deleteTask = async (id) => {
     const response = await fetch(
-      `http://localhost:4000/api/tasks/deleteTask/${id}`,
+      `https://todo-list-backend-r9in.onrender.com/api/tasks/deleteTask/${id}`,
       {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
@@ -107,7 +107,7 @@ const Dashboard = () => {
     setError("");
 
     const response = await fetch(
-      `http://localhost:4000/api/tasks/updateTask/${currentTask._id}`,
+      `https://todo-list-backend-r9in.onrender.com/api/tasks/updateTask/${currentTask._id}`,
       {
         method: "PUT",
         headers: {
