@@ -44,8 +44,8 @@ const LoginRegister = () => {
     if (!validateForm()) return;
 
     const endpoint = isLogin
-      ? "http://localhost:4000/api/auth/login"
-      : "http://localhost:4000/api/auth/register";
+      ? "https://todo-list-backend-r9in.onrender.com/api/auth/login"
+      : "https://todo-list-backend-r9in.onrender.com/api/auth/register";
 
     try {
       const response = await fetch(endpoint, {
